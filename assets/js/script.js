@@ -30,18 +30,18 @@ window.addEventListener("load", function () {
 
 
 /**
- * MOBILE NAVBAR
+ * MOBILE navbarr
  * 
- * show the mobile navbar when click menu button
+ * show the mobile navbarr when click menu button
  * and hidden after click menu close button or overlay
  */
 
-const navbar = document.querySelector("[data-navbar]");
+const navbarr = document.querySelector("[data-navbarr]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
 
 const toggleNav = function () {
-  navbar.classList.toggle("active");
+  navbarr.classList.toggle("active");
   overlay.classList.toggle("active");
   document.body.classList.toggle("nav-active");
 }
@@ -92,3 +92,11 @@ const revealElementOnScroll = function () {
 window.addEventListener("scroll", revealElementOnScroll);
 
 window.addEventListener("load", revealElementOnScroll);
+
+const buttons = document.querySelectorAll(".faq-toggle");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.parentNode.classList.toggle("active");
+  });
+});
